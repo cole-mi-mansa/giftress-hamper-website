@@ -8,6 +8,7 @@ interface TestimonialCardProps {
   text: string;
   rating: number;
   image?: string;
+  company?: string;
 }
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({
@@ -15,7 +16,8 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   title,
   text,
   rating,
-  image
+  image,
+  company
 }) => {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
@@ -33,7 +35,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         )}
         <div>
           <h4 className="font-medium text-giftress-navy">{name}</h4>
-          <p className="text-sm text-gray-500">{title}</p>
+          <p className="text-sm text-gray-500">{title}{company && <span> at {company}</span>}</p>
         </div>
       </div>
       

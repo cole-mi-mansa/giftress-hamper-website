@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Package, Heart, Globe, Users, Calendar } from 'lucide-react';
+import { ArrowRight, Package, Heart, Globe, Users, Calendar, CheckCircle, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
@@ -66,6 +66,39 @@ const Index = () => {
         </div>
       </section>
       
+      {/* Mission & Vision */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+            <div className="text-center bg-gray-50 p-8 rounded-lg shadow-sm">
+              <div className="mb-4 inline-block">
+                <div className="w-16 h-16 rounded-full bg-yellow-100 flex items-center justify-center">
+                  <span className="text-yellow-600 text-2xl">⭐</span>
+                </div>
+              </div>
+              <h3 className="text-2xl font-playfair font-semibold mb-4">Our Mission</h3>
+              <p className="text-gray-700 italic">
+                "To redefine gifting by delivering exquisitely curated, premium hampers that evoke joy, strengthen 
+                connections, and leave a lasting impression—all with seamless convenience and personalized care."
+              </p>
+            </div>
+            
+            <div className="text-center bg-gray-50 p-8 rounded-lg shadow-sm">
+              <div className="mb-4 inline-block">
+                <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center">
+                  <span className="text-purple-600 text-2xl">🔮</span>
+                </div>
+              </div>
+              <h3 className="text-2xl font-playfair font-semibold mb-4">Our Vision</h3>
+              <p className="text-gray-700 italic">
+                "To become the most trusted and innovative gifting brand globally, known for transforming ordinary 
+                moments into extraordinary memories through luxury, sustainability, and digital-first excellence."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* About Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -116,6 +149,14 @@ const Index = () => {
                 Ethically sourced products and eco-friendly packaging options that care for our planet.
               </p>
             </div>
+          </div>
+          
+          <div className="text-center mt-12">
+            <Link to="/about">
+              <Button variant="outline" className="btn-outline">
+                Learn More About Us
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -190,7 +231,9 @@ const Index = () => {
             </div>
             
             <div className="mt-10">
-              <Button className="btn-primary">Learn More About Our Impact</Button>
+              <Link to="/about">
+                <Button className="btn-primary">Learn More About Our Impact</Button>
+              </Link>
             </div>
           </div>
         </div>
@@ -227,9 +270,11 @@ const Index = () => {
                 </div>
               </div>
               
-              <Button className="bg-white text-giftress-navy hover:bg-gray-100">
-                Explore Corporate Gifting
-              </Button>
+              <Link to="/corporate">
+                <Button className="bg-white text-giftress-navy hover:bg-gray-100">
+                  Explore Corporate Gifting
+                </Button>
+              </Link>
             </div>
             
             <div className="relative">
@@ -251,6 +296,67 @@ const Index = () => {
         </div>
       </section>
       
+      {/* Brand Authority Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-5xl mx-auto">
+            <div className="relative">
+              <div className="bg-gray-100 rounded-lg p-8">
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-white rounded p-4 shadow-sm flex items-center justify-center h-32">
+                    <Instagram className="h-12 w-12 text-pink-500" />
+                  </div>
+                  <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded p-4 shadow-sm flex items-center justify-center h-32 text-white font-bold text-3xl">
+                    250K+
+                  </div>
+                  <div className="col-span-2 bg-giftress-navy text-white rounded p-6 shadow-sm flex items-center justify-center">
+                    <p className="text-center text-lg font-medium">UGC-Driven Campaigns</p>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -bottom-5 -left-5 bg-giftress-gold text-white p-3 rounded-lg shadow-md">
+                <p className="font-medium">Gifting Influencer Network</p>
+              </div>
+            </div>
+            
+            <div>
+              <h2 className="text-3xl md:text-4xl font-playfair font-semibold mb-6">Brand Authority & Community</h2>
+              <p className="text-lg text-gray-700 mb-6">
+                We're building a community centered around premium emotional gifting, establishing ourselves as thought leaders in the luxury gifting space.
+              </p>
+              
+              <ul className="space-y-4 mb-8">
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-giftress-blue mr-3 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="font-medium text-lg">Social Media Growth</h4>
+                    <p className="text-gray-600">Growing our community to 250K+ followers through authentic user-generated content and storytelling.</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-giftress-blue mr-3 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="font-medium text-lg">Luxury Brand Collaborations</h4>
+                    <p className="text-gray-600">Partnering with premium wellness brands and lifestyle influencers who share our values.</p>
+                  </div>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-giftress-blue mr-3 flex-shrink-0 mt-0.5" />
+                  <div>
+                    <h4 className="font-medium text-lg">Gifting Etiquette Guide</h4>
+                    <p className="text-gray-600">Our upcoming publication to establish thought leadership in the art of meaningful gifting.</p>
+                  </div>
+                </li>
+              </ul>
+              
+              <Button variant="outline" className="btn-outline">
+                Follow Our Journey
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       {/* Testimonials */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -262,7 +368,8 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <TestimonialCard 
               name="Sarah Johnson"
-              title="Corporate Client"
+              title="Head of HR"
+              company="Horizon Tech"
               text="The corporate hampers we ordered were exceptional. Our clients were thrilled with the quality and presentation. Giftress Hampers made our company look impressive!"
               rating={5}
             />
@@ -292,12 +399,16 @@ const Index = () => {
             Explore our collections or contact us for personalized gifting solutions that will delight your recipients.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button className="bg-white text-giftress-blue hover:bg-gray-100 text-lg py-6 px-8">
-              Shop Collections
-            </Button>
-            <Button variant="outline" className="border-white text-white hover:bg-white/20 text-lg py-6 px-8">
-              Contact Our Team
-            </Button>
+            <Link to="/collections">
+              <Button className="bg-white text-giftress-blue hover:bg-gray-100 text-lg py-6 px-8">
+                Shop Collections
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button variant="outline" className="border-white text-white hover:bg-white/20 text-lg py-6 px-8">
+                Contact Our Team
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
